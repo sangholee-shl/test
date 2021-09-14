@@ -808,7 +808,7 @@
 						var outlier_temp;
 
 						OUTLIER_VOLTAGE = ["OUTLIER_VOLTAGE"];
-						OUTLIER_CURRENT = ["OUTLIER_CURRENT"];
+						OUTLIER_CURRENT_1 = ["OUTLIER_CURRENT"];
 						OUTLIER_GAS = ["OUTLIER_GAS"];
 						OUTLIER_WIRESPEED = ["OUTLIER_WIRESPEED"];
 
@@ -835,15 +835,15 @@
 						var x_label_cnt = 0;
 						for(var i=read_cnt; i>=end_cnt; i--) {
 							VOLTAGE.push(VOLTAGE_raw[i]);						
-							CURRENT.push(CURRENT_raw[i]);
+							CURRENT_1.push(CURRENT_raw[i]);
 							GAS.push(GAS_raw[i]);
 							WIRESPEED.push(WIRESPEED_raw[i]);
 							OUTLIER_VOLTAGE.push(VOLTAGE_raw[i]*OUTLIER_raw[i]);
-							OUTLIER_CURRENT.push(CURRENT_raw[i]*OUTLIER_raw[i]);
+							OUTLIER_CURRENT_1.push(CURRENT_raw[i]*OUTLIER_raw[i]);
 							OUTLIER_GAS.push(GAS_raw[i]*OUTLIER_raw[i]);
 							OUTLIER_WIRESPEED.push(WIRESPEED_raw[i]*OUTLIER_raw[i]);
 							google_voltage.addRow([String(x_label_cnt++), Number(VOLTAGE_raw[i]), Number(VOLTAGE_raw[i]*OUTLIER_raw[i])]);
-							google_current_1.addRow([String(x_label_cnt++), Number(CURRENT_raw[i]), Number(CURRENT_raw[i]*OUTLIER_raw[i])]);
+							google_current_1.addRow([String(x_label_cnt++), Number(CURRENT_1_raw[i]), Number(CURRENT_1_raw[i]*OUTLIER_raw[i])]);
 							google_gas.addRow([String(x_label_cnt++), Number(GAS_raw[i]), Number(GAS_raw[i]*OUTLIER_raw[i])]);
 							google_wirespeed.addRow([String(x_label_cnt++), Number(WIRESPEED_raw[i]), Number(WIRESPEED_raw[i]*OUTLIER_raw[i])]);
 						}
@@ -852,7 +852,7 @@
 						progress.toFixed(2);
 						// alert(VOLTAGE);				
 						$(document).ready(function() {
-							chart_data_load_1(VOLTAGE, google_voltage, CURRENT, google_current_1, GAS, google_gas, WIRESPEED, google_wirespeed, outlier_rate, progress, outlier_change, OUTLIER_VOLTAGE, OUTLIER_CURRENT, OUTLIER_GAS, OUTLIER_WIRESPEED)
+							chart_data_load_1(VOLTAGE, google_voltage, CURRENT_1, google_current_1, GAS, google_gas, WIRESPEED, google_wirespeed, outlier_rate, progress, outlier_change, OUTLIER_VOLTAGE, OUTLIER_CURRENT_1, OUTLIER_GAS, OUTLIER_WIRESPEED)
 							// setTimeout(chart_data_load(VOLTAGE), 500); // 3000ms(3초)가 경과하면 함수 실행
 						});
 						
@@ -866,7 +866,7 @@
 						}							
 					}
 				
-					function chart_data_load_1(VOLTAGE, google_voltage, CURRENT, google_current_1, GAS, google_gas, WIRESPEED, google_wirespeed, outlier_rate, progress, outlier_change, OUTLIER_VOLTAGE, OUTLIER_CURRENT, OUTLIER_GAS, OUTLIER_WIRESPEED) {
+					function chart_data_load_1(VOLTAGE, google_voltage, CURRENT_1, google_current_1, GAS, google_gas, WIRESPEED, google_wirespeed, outlier_rate, progress, outlier_change, OUTLIER_VOLTAGE, OUTLIER_CURRENT_1, OUTLIER_GAS, OUTLIER_WIRESPEED) {
 						// alert('chartLoad')
 					
 						document.getElementById('progress_bar_1').style.width = progress + '%';
