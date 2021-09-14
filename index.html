@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-	<script type="text/javascript">
-		var filter = "win16|win32|win64|mac|macintel"; 
+	<head>
+		<meta charset="utf-8">
+		<title>KAIST AI Captone</title>
+		<script type="text/javascript">
+			var filter = "win16|win32|win64|mac|macintel"; 
 
-		if ( navigator.platform ) { 
-			if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
-				//mobile 
-				alert('mobile 접속'); 
-			} else { 
-				//pc 
-				alert('pc 접속'); 
-			} 
-		}
-	</script>
-  </head>
-  <body>
-    My test page
-  </body>
+			if ( navigator.platform ) { 
+				if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
+					//mobile
+					location.replace("Mobile/index.html");
+				} else { 
+					//pc				
+					location.replace("Web/index.html");
+				} 
+			}
+		</script>
+    </head>
+    <body>
+		KAIST AI Capstone
+    </body>
 </html>
 
 
