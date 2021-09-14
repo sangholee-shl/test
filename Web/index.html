@@ -678,12 +678,12 @@
 									</header>
 									<br>
 									<ul>
-										<li><a href="#"><div onclick="menu_total()">전체 용접 상태</div></a></li>
-										<li><a href="#"><div onclick="menu_weld_1()">용접1</div></a></li>
-										<li><a href="#"><div onclick="menu_weld_2()">용접2</div></a></li>
-										<li><a href="#"><div onclick="menu_weld_3()">용접3</div></a></li>
-										<li><a href="#"><div onclick="menu_weld_4()">용접4</div></a></li>
-										<li><a href="#"><div onclick="menu_video()">작업현장</div></a></li>
+										<li><a href="#"><div id="menu_total_txt" onclick="menu_total()">전체 용접 상태</div></a></li>
+										<li><a href="#"><div id="menu_weld_1_txt" onclick="menu_weld_1()">용접1</div></a></li>
+										<li><a href="#"><div id="menu_weld_2_txt" onclick="menu_weld_2()">용접2</div></a></li>
+										<li><a href="#"><div id="menu_weld_3_txt" onclick="menu_weld_3()">용접3</div></a></li>
+										<li><a href="#"><div id="menu_weld_4_txt" onclick="menu_weld_4()">용접4</div></a></li>
+										<li><a href="#"><div id="menu_video_txt" onclick="menu_video()">작업현장</div></a></li>
 									</ul><br><br><br><br><br><br><br>									
 								</nav>
 						
@@ -1646,173 +1646,7 @@
 					google_chart_1_4.draw(google_wirespeed, google_chart_1_4_options);
 				}
 
-
 			</script>
-
-
-			<!-- <script type="text/javascript">
-				var chart_1_1 = c3.generate({ 
-					bindto: '#chart_1_1',
-					data: {
-						columns: [
-							['VOLTAGE'], 
-							['OUTLIER_VOLTAGE']
-						],
-						// axes: {
-						// 	data2: 'y2' // ADD
-						// }
-						colors: { 
-							'VOLTAGE': 'blue',
-							'OUTLIER_VOLTAGE': 'red',	   
-						},
-						types: {
-							VOLTAGE: 'line',
-							OUTLIER_VOLTAGE: 'bar',							
-						},
-						// point: {
-						// 	// 'data1': {
-						// 	// 	shape: 'circle',
-						// 	// 	color: '#ff0000',
-						// 	// 	r: 2
-						// 	// },
-						// 	'OUTLIER_VOLTAGE': {
-						// 		shape: 'square',
-						// 		color: '#0000ff',
-						// 		r: 3
-						// 	}
-						// },
-					},
-					axis: {
-						x: {
-							min: 0,
-							max: 50
-						},
-						y: {
-							min: 20,
-							max: 40,
-							tick: 5
-						}
-						// y2: {
-						// 	show: true // ADD
-						// }
-					},
-					legend: {
-						show: false
-					}
-				});
-				var chart_1_2 = c3.generate({ 
-					bindto: '#chart_1_2',
-					data: {
-						columns: [
-							['CURRENT'],
-							['OUTLIER_CURRENT']
-						],
-						colors: { 
-							'CURRENT': 'green',
-							'OUTLIER_CURRENT': 'red',	 
-						},
-						types: {
-							CURRENT: 'line',
-							OUTLIER_CURRENT: 'bar',	
-						},
-						// axes: {
-						// 	data2: 'y2' // ADD
-						// }
-					},
-					axis: {
-						x: {
-							min: 0,
-							max: 50
-						},
-						y: {
-							min: 50,
-							max: 550,
-							tick: 5
-						}
-						// y2: {
-						// 	show: true // ADD
-						// }
-					},
-					legend: {
-						show: false
-					}
-				});
-				var chart_1_3 = c3.generate({ 
-					bindto: '#chart_1_3',
-					data: {
-						columns: [
-							['GAS'],
-							['OUTLIER_GAS']
-						],
-						colors: { 
-							'GAS': '#000080',
-							'OUTLIER_GAS': 'red',	 
-						},
-						types: {
-							GAS: 'line',
-							OUTLIER_GAS: 'bar',	
-						},
-						// axes: {
-						// 	data2: 'y2' // ADD
-						// }
-					},
-					axis: {
-						x: {
-							min: 0,
-							max: 50
-						},
-						y: {
-							min: 25,
-							max: 35,
-							tick: 5
-						}
-						// y2: {
-						// 	show: true // ADD
-						// }
-					},
-					legend: {
-						show: false
-					}
-				});
-				var chart_1_4 = c3.generate({ 
-					bindto: '#chart_1_4',
-					data: {
-						columns: [
-							['WIRESPEED'],
-							['OUTLIER_WIRESPEED']
-						],
-						colors: 
-						{ 
-							'WIRESPEED': '#006400',
-							'OUTLIER_WIRESPEED': 'red',	 
-						},
-						types: {
-							WIRESPEED: 'line',
-							OUTLIER_WIRESPEED: 'bar',	
-						},
-						// axes: {
-						// 	data2: 'y2' // ADD
-						// }
-					},
-					axis: {
-						x: {
-							min: 0,
-							max: 50
-						},
-						y: {
-							min: 1.25,
-							max: 14.7,
-							tick: 5
-						}
-						// y2: {
-						// 	show: true // ADD
-						// }
-					},
-					legend: {
-						show: false
-					}
-				});
-			</script> -->
 
 <!-- weld-2 -->
 			<script type="text/javascript">
@@ -2020,168 +1854,7 @@
 				function google_chart_2_4_update(google_wirespeed) {
 					google_chart_2_4.draw(google_wirespeed, google_chart_2_4_options);
 				}				
-				
-				// var chart_2_1 = c3.generate({ 
-				// 	bindto: '#chart_2_1',
-				// 	data: {
-				// 		columns: [
-				// 			['VOLTAGE'], 
-				// 			['OUTLIER_VOLTAGE']
-				// 		],
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 		colors: { 
-				// 			'VOLTAGE': 'blue',
-				// 			'OUTLIER_VOLTAGE': 'red',	   
-				// 		},
-				// 		types: {
-				// 			VOLTAGE: 'line',
-				// 			OUTLIER_VOLTAGE: 'bar',							
-				// 		},
-				// 		// point: {
-				// 		// 	// 'data1': {
-				// 		// 	// 	shape: 'circle',
-				// 		// 	// 	color: '#ff0000',
-				// 		// 	// 	r: 2
-				// 		// 	// },
-				// 		// 	'OUTLIER_VOLTAGE': {
-				// 		// 		shape: 'square',
-				// 		// 		color: '#0000ff',
-				// 		// 		r: 3
-				// 		// 	}
-				// 		// },
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 20,
-				// 			max: 40,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_2_2 = c3.generate({ 
-				// 	bindto: '#chart_2_2',
-				// 	data: {
-				// 		columns: [
-				// 			['CURRENT'],
-				// 			['OUTLIER_CURRENT']
-				// 		],
-				// 		colors: { 
-				// 			'CURRENT': 'green',
-				// 			'OUTLIER_CURRENT': 'red',	 
-				// 		},
-				// 		types: {
-				// 			CURRENT: 'line',
-				// 			OUTLIER_CURRENT: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 50,
-				// 			max: 550,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_2_3 = c3.generate({ 
-				// 	bindto: '#chart_2_3',
-				// 	data: {
-				// 		columns: [
-				// 			['GAS'],
-				// 			['OUTLIER_GAS']
-				// 		],
-				// 		colors: { 
-				// 			'GAS': '#000080',
-				// 			'OUTLIER_GAS': 'red',	 
-				// 		},
-				// 		types: {
-				// 			GAS: 'line',
-				// 			OUTLIER_GAS: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 25,
-				// 			max: 35,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_2_4 = c3.generate({ 
-				// 	bindto: '#chart_2_4',
-				// 	data: {
-				// 		columns: [
-				// 			['WIRESPEED'],
-				// 			['OUTLIER_WIRESPEED']
-				// 		],
-				// 		colors: 
-				// 		{ 
-				// 			'WIRESPEED': '#006400',
-				// 			'OUTLIER_WIRESPEED': 'red',	 
-				// 		},
-				// 		types: {
-				// 			WIRESPEED: 'line',
-				// 			OUTLIER_WIRESPEED: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 1.25,
-				// 			max: 14.7,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
+
 			</script>
 
 <!-- weld-3 -->
@@ -2389,169 +2062,8 @@
 				}
 				function google_chart_3_4_update(google_wirespeed) {
 					google_chart_3_4.draw(google_wirespeed, google_chart_3_4_options);
-				}	
+				}
 
-				// var chart_3_1 = c3.generate({ 
-				// 	bindto: '#chart_3_1',
-				// 	data: {
-				// 		columns: [
-				// 			['VOLTAGE'], 
-				// 			['OUTLIER_VOLTAGE']
-				// 		],
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 		colors: { 
-				// 			'VOLTAGE': 'blue',
-				// 			'OUTLIER_VOLTAGE': 'red',	   
-				// 		},
-				// 		types: {
-				// 			VOLTAGE: 'line',
-				// 			OUTLIER_VOLTAGE: 'bar',							
-				// 		},
-				// 		// point: {
-				// 		// 	// 'data1': {
-				// 		// 	// 	shape: 'circle',
-				// 		// 	// 	color: '#ff0000',
-				// 		// 	// 	r: 2
-				// 		// 	// },
-				// 		// 	'OUTLIER_VOLTAGE': {
-				// 		// 		shape: 'square',
-				// 		// 		color: '#0000ff',
-				// 		// 		r: 3
-				// 		// 	}
-				// 		// },
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 20,
-				// 			max: 40,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_3_2 = c3.generate({ 
-				// 	bindto: '#chart_3_2',
-				// 	data: {
-				// 		columns: [
-				// 			['CURRENT'],
-				// 			['OUTLIER_CURRENT']
-				// 		],
-				// 		colors: { 
-				// 			'CURRENT': 'green',
-				// 			'OUTLIER_CURRENT': 'red',	 
-				// 		},
-				// 		types: {
-				// 			CURRENT: 'line',
-				// 			OUTLIER_CURRENT: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 50,
-				// 			max: 550,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_3_3 = c3.generate({ 
-				// 	bindto: '#chart_3_3',
-				// 	data: {
-				// 		columns: [
-				// 			['GAS'],
-				// 			['OUTLIER_GAS']
-				// 		],
-				// 		colors: { 
-				// 			'GAS': '#000080',
-				// 			'OUTLIER_GAS': 'red',	 
-				// 		},
-				// 		types: {
-				// 			GAS: 'line',
-				// 			OUTLIER_GAS: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 25,
-				// 			max: 35,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_3_4 = c3.generate({ 
-				// 	bindto: '#chart_3_4',
-				// 	data: {
-				// 		columns: [
-				// 			['WIRESPEED'],
-				// 			['OUTLIER_WIRESPEED']
-				// 		],
-				// 		colors: 
-				// 		{ 
-				// 			'WIRESPEED': '#006400',
-				// 			'OUTLIER_WIRESPEED': 'red',	 
-				// 		},
-				// 		types: {
-				// 			WIRESPEED: 'line',
-				// 			OUTLIER_WIRESPEED: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 1.25,
-				// 			max: 14.7,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
 			</script>
 
 			<script type="text/javascript">
@@ -2759,168 +2271,7 @@
 				function google_chart_4_4_update(google_wirespeed) {
 					google_chart_4_4.draw(google_wirespeed, google_chart_4_4_options);
 				}				
-				
-				// var chart_4_1 = c3.generate({ 
-				// 	bindto: '#chart_4_1',
-				// 	data: {
-				// 		columns: [
-				// 			['VOLTAGE'], 
-				// 			['OUTLIER_VOLTAGE']
-				// 		],
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 		colors: { 
-				// 			'VOLTAGE': 'blue',
-				// 			'OUTLIER_VOLTAGE': 'red',	   
-				// 		},
-				// 		types: {
-				// 			VOLTAGE: 'line',
-				// 			OUTLIER_VOLTAGE: 'bar',							
-				// 		},
-				// 		// point: {
-				// 		// 	// 'data1': {
-				// 		// 	// 	shape: 'circle',
-				// 		// 	// 	color: '#ff0000',
-				// 		// 	// 	r: 2
-				// 		// 	// },
-				// 		// 	'OUTLIER_VOLTAGE': {
-				// 		// 		shape: 'square',
-				// 		// 		color: '#0000ff',
-				// 		// 		r: 3
-				// 		// 	}
-				// 		// },
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 20,
-				// 			max: 40,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_4_2 = c3.generate({ 
-				// 	bindto: '#chart_4_2',
-				// 	data: {
-				// 		columns: [
-				// 			['CURRENT'],
-				// 			['OUTLIER_CURRENT']
-				// 		],
-				// 		colors: { 
-				// 			'CURRENT': 'green',
-				// 			'OUTLIER_CURRENT': 'red',	 
-				// 		},
-				// 		types: {
-				// 			CURRENT: 'line',
-				// 			OUTLIER_CURRENT: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 50,
-				// 			max: 550,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_4_3 = c3.generate({ 
-				// 	bindto: '#chart_4_3',
-				// 	data: {
-				// 		columns: [
-				// 			['GAS'],
-				// 			['OUTLIER_GAS']
-				// 		],
-				// 		colors: { 
-				// 			'GAS': '#000080',
-				// 			'OUTLIER_GAS': 'red',	 
-				// 		},
-				// 		types: {
-				// 			GAS: 'line',
-				// 			OUTLIER_GAS: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 25,
-				// 			max: 35,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
-				// var chart_4_4 = c3.generate({ 
-				// 	bindto: '#chart_4_4',
-				// 	data: {
-				// 		columns: [
-				// 			['WIRESPEED'],
-				// 			['OUTLIER_WIRESPEED']
-				// 		],
-				// 		colors: 
-				// 		{ 
-				// 			'WIRESPEED': '#006400',
-				// 			'OUTLIER_WIRESPEED': 'red',	 
-				// 		},
-				// 		types: {
-				// 			WIRESPEED: 'line',
-				// 			OUTLIER_WIRESPEED: 'bar',	
-				// 		},
-				// 		// axes: {
-				// 		// 	data2: 'y2' // ADD
-				// 		// }
-				// 	},
-				// 	axis: {
-				// 		x: {
-				// 			min: 0,
-				// 			max: 50
-				// 		},
-				// 		y: {
-				// 			min: 1.25,
-				// 			max: 14.7,
-				// 			tick: 5
-				// 		}
-				// 		// y2: {
-				// 		// 	show: true // ADD
-				// 		// }
-				// 	},
-				// 	legend: {
-				// 		show: false
-				// 	}
-				// });
+
 			</script>
 
 <!-- 작업현장 -->
@@ -2933,6 +2284,12 @@
 					document.getElementById('menu_weld_3').style.display = 'none';
 					document.getElementById('menu_weld_4').style.display = 'none';
 					document.getElementById('menu_video').style.display = 'none';
+					document.getElementById('menu_total_txt').style.color = '#4696e5';
+					document.getElementById('menu_weld_1_txt').style.color = 'black';
+					document.getElementById('menu_weld_2_txt').style.color = 'black';
+					document.getElementById('menu_weld_3_txt').style.color = 'black';
+					document.getElementById('menu_weld_4_txt').style.color = 'black';
+					document.getElementById('menu_video_txt').style.color = 'black';
 				}
 				function menu_weld_1() {
 					document.getElementById('main_txt').innerText = '용접1';
@@ -2942,6 +2299,12 @@
 					document.getElementById('menu_weld_3').style.display = 'none';
 					document.getElementById('menu_weld_4').style.display = 'none';
 					document.getElementById('menu_video').style.display = 'none';
+					document.getElementById('menu_total_txt').style.color = 'black';
+					document.getElementById('menu_weld_1_txt').style.color = '#4696e5';
+					document.getElementById('menu_weld_2_txt').style.color = 'black';
+					document.getElementById('menu_weld_3_txt').style.color = 'black';
+					document.getElementById('menu_weld_4_txt').style.color = 'black';
+					document.getElementById('menu_video_txt').style.color = 'black';
 				}
 				function menu_weld_2() {
 					document.getElementById('main_txt').innerText = '용접2';
@@ -2951,6 +2314,12 @@
 					document.getElementById('menu_weld_3').style.display = 'none';
 					document.getElementById('menu_weld_4').style.display = 'none';
 					document.getElementById('menu_video').style.display = 'none';
+					document.getElementById('menu_total_txt').style.color = 'black';
+					document.getElementById('menu_weld_1_txt').style.color = 'black';
+					document.getElementById('menu_weld_2_txt').style.color = '#4696e5';
+					document.getElementById('menu_weld_3_txt').style.color = 'black';
+					document.getElementById('menu_weld_4_txt').style.color = 'black';
+					document.getElementById('menu_video_txt').style.color = 'black';
 				}
 				function menu_weld_3() {
 					document.getElementById('main_txt').innerText = '용접3';
@@ -2960,6 +2329,12 @@
 					document.getElementById('menu_weld_3').style.display = 'block';
 					document.getElementById('menu_weld_4').style.display = 'none';
 					document.getElementById('menu_video').style.display = 'none';
+					document.getElementById('menu_total_txt').style.color = 'black';
+					document.getElementById('menu_weld_1_txt').style.color = 'black';
+					document.getElementById('menu_weld_2_txt').style.color = 'black';
+					document.getElementById('menu_weld_3_txt').style.color = '#4696e5';
+					document.getElementById('menu_weld_4_txt').style.color = 'black';
+					document.getElementById('menu_video_txt').style.color = 'black';
 				}
 				function menu_weld_4() {
 					document.getElementById('main_txt').innerText = '용접4';
@@ -2969,8 +2344,14 @@
 					document.getElementById('menu_weld_3').style.display = 'none';
 					document.getElementById('menu_weld_4').style.display = 'block';
 					document.getElementById('menu_video').style.display = 'none';
+					document.getElementById('menu_total_txt').style.color = 'black';
+					document.getElementById('menu_weld_1_txt').style.color = 'black';
+					document.getElementById('menu_weld_2_txt').style.color = 'black';
+					document.getElementById('menu_weld_3_txt').style.color = 'black';
+					document.getElementById('menu_weld_4_txt').style.color = '#4696e5';
+					document.getElementById('menu_video_txt').style.color = 'black';
 				}
-				function menu_video() {
+				function menu_video() {					
 					document.getElementById('main_txt').innerText = '작업 현장';
 					document.getElementById('menu_total').style.display = 'none';
 					document.getElementById('menu_weld_1').style.display = 'none';
@@ -2978,6 +2359,12 @@
 					document.getElementById('menu_weld_3').style.display = 'none';
 					document.getElementById('menu_weld_4').style.display = 'none';
 					document.getElementById('menu_video').style.display = 'block';
+					document.getElementById('menu_total_txt').style.color = 'black';
+					document.getElementById('menu_weld_1_txt').style.color = 'black';
+					document.getElementById('menu_weld_2_txt').style.color = 'black';
+					document.getElementById('menu_weld_3_txt').style.color = 'black';
+					document.getElementById('menu_weld_4_txt').style.color = 'black';
+					document.getElementById('menu_video_txt').style.color = '#4696e5';
 				}
 			</script>
 
