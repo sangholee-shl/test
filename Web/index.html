@@ -719,7 +719,7 @@
 					var allRows;
 					var VOLTAGE_raw;
 					var VOLTAGE;					
-					var CURRNET_raw;
+					var CURRENT_1_raw;
 					var CURRENT_1;
 					var GAS_raw;
 					var GAS;
@@ -835,11 +835,11 @@
 						var x_label_cnt = 0;
 						for(var i=read_cnt; i>=end_cnt; i--) {
 							VOLTAGE.push(VOLTAGE_raw[i]);						
-							CURRENT_1.push(CURRENT_raw[i]);
+							CURRENT_1.push(CURRENT_1_raw[i]);
 							GAS.push(GAS_raw[i]);
 							WIRESPEED.push(WIRESPEED_raw[i]);
 							OUTLIER_VOLTAGE.push(VOLTAGE_raw[i]*OUTLIER_raw[i]);
-							OUTLIER_CURRENT_1.push(CURRENT_raw[i]*OUTLIER_raw[i]);
+							OUTLIER_CURRENT_1.push(CURRENT_1_raw[i]*OUTLIER_raw[i]);
 							OUTLIER_GAS.push(GAS_raw[i]*OUTLIER_raw[i]);
 							OUTLIER_WIRESPEED.push(WIRESPEED_raw[i]*OUTLIER_raw[i]);
 							google_voltage.addRow([String(x_label_cnt++), Number(VOLTAGE_raw[i]), Number(VOLTAGE_raw[i]*OUTLIER_raw[i])]);
@@ -1087,7 +1087,7 @@
 					var OUTLIER_raw;
 					var OUTLIER;
 					var OUTLIER_VOLTAGE;
-					var OUTLIER_CURRENT;
+					var OUTLIER_CURRENT_3;
 					var OUTLIER_GAS;
 					var OUTLIER_WIRESPEED;
 					var DEFECT_raw;
@@ -1109,7 +1109,7 @@
 					// 		// output.innerText = reader.result;
 					// 		allRows = reader.result.split(/\r?\n|\r/);
 					// 		VOLTAGE_raw = allRows.map(line => line.split(',')[0]);
-					// 		CURRENT_raw = allRows.map(line => line.split(',')[1]);
+					// 		CURRENT_3_raw = allRows.map(line => line.split(',')[1]);
 					// 		GAS_raw = allRows.map(line => line.split(',')[2]);
 					// 		WIRESPEED_raw = allRows.map(line => line.split(',')[3]);
 					// 		OUTLIER_raw = allRows.map(line => line.split(',')[4]);
