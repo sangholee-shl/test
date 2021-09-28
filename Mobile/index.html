@@ -1309,9 +1309,9 @@
 					
 					google_chart_1_1 = new google.visualization.ComboChart(document.getElementById('google_chart_1_1'));
 					google_chart_1_1.draw(data, google_chart_1_1_options);
-var my_div = document.getElementById('google_chart_1_1');
+var my_div = document.getElementById('chart_1_1_br');
 google.visualization.events.addListener(google_chart_1_1, 'ready', function () {
-	my_div.innerHTML = '<img src"' + google_chart_1_1.getImageURI() + '">';
+	my_div.innerHTML = '<img class="google-chart" src"' + google_chart_1_1.getImageURI() + '">';
 });
 				}
 				function google_chart_1_1_update(google_voltage) {
