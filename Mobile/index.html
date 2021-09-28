@@ -1308,7 +1308,11 @@
 					};
 					
 					google_chart_1_1 = new google.visualization.ComboChart(document.getElementById('google_chart_1_1'));
-					google_chart_1_1.draw(data, google_chart_1_1_options);				
+					google_chart_1_1.draw(data, google_chart_1_1_options);
+var my_div = document.getElementById('google_chart_1_1');
+google.visualization.events.addListener(google_chart_1_1, 'ready', function () {
+	my_ediv.innerHTML = '<img src"' + google_chart_1_1.getImageURI() + '">';
+});
 				}
 				function google_chart_1_1_update(google_voltage) {
 					google_chart_1_1.draw(google_voltage, google_chart_1_1_options);
